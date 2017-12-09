@@ -1,17 +1,20 @@
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      <b>Psst!</b> - Try <a href="http://view.ionic.io/">Ionic View</a> to easily share and test your app with clients and co-workers.
-    </p>
-  </ion-content>
+<ion-view view-title="Move">
+  <ion-pane>
+    <ion-header-bar class="bar-stable" id="header">
+      <h1 class="title">Move it!</h1>
+    </ion-header-bar>
+    <ion-content class="has-header" id="contentBG" ng-controller="DashCtrl">
+      <div id='buttons'>
+        <button class="button button-full button-stable" ng-click="animateVisuals()">Content</button>
+        <button class="button button-full button-stable" ng-click="moveButtons()">Move me</button>
+        <button class="button button-full button-stable" ng-click="blink()">Blink</button>
+        <button class="button button-full button-stable" ng-click="timer()">Timer</button>
+      </div>
+      <div style="width: 100%; background-color:#E0F2F1; height: 50px; margin-top: 70%; text-align: center; font-size: 40px; line-height: 100%;"
+        ng-cloak>
+        <div id="myTimer">{{time}}</div>
+      </div>
+    </ion-content>
+  </ion-pane>
+  </body>
 </ion-view>

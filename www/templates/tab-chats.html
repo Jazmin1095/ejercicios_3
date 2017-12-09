@@ -1,16 +1,46 @@
-<ion-view view-title="Chats">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-view>
+<head>
+  <!-- META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Optimize mobile viewport -->
+
+  
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <!-- load bootstrap -->
+  <style>
+    html {
+      overflow-y: scroll;
+    }
+
+    body {
+      padding-top: 50px;
+    }
+
+    #todo-list {
+      margin-bottom: 30px;
+    }
+  </style>
+
+  <!-- SPELLS -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!-- load jquery -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+
+<body ng-controller="ChatsCtrl">
+  <div class="container">
+  <h3>Filter in action</h3>  
+    <!-- HEADER AND TODO COUNT -->
+    <div class="jumbotron text-center">
+        <p ng-bind-html="myHtmlText | parseUrl"></p>
+      </div>
+
+  </div>
+
+</body>
+
